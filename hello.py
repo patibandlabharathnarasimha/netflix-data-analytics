@@ -10,17 +10,6 @@ sql = "SELECT type,count(*) as count FROM data/netflix_titles.csv group by type"
 tv_movies_df = query(sql, "data/netflix_titles.csv")
 tv_movies_fig = px.pie(tv_movies_df, values='count', names='type')
 
-# fig = px.scatter(df, x='quantity', y='value', text='item',
-#                  title='Quantity vs. Value',
-#                  labels={'quantity': 'Quantity', 'value': 'Value'})
-
-# fig.update_traces(textposition='top center', marker=dict(size=12, color='lightblue'))
-# fig.update_layout(template='plotly_white')
-
-# # Displays
-# import preswald
-
-
 text("TV Shows vs Movies on Netflix")
 plotly(tv_movies_fig)
 table(tv_movies_df)
