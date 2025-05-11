@@ -1,0 +1,20 @@
+[project]
+title = "Netflix Analytics Dashboard"
+version = "0.1.0"
+port = 8501
+slug = "netflix-analytics"  
+entrypoint = "app.py"    
+
+[branding]
+name = "Netflix Insights"
+logo = "images/data-analytics.png"
+favicon = "images/analysis.ico"
+primaryColor = "#F89613"
+
+[data.netflix_titles]
+type = "csv"
+path = "data/netflix_titles.csv"
+
+[logging]
+level = "INFO"  
+format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
