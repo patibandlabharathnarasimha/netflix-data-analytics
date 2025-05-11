@@ -3,7 +3,7 @@ import plotly.express as px
 import preswald
 from preswald import connect, get_df,query,table,plotly,text
 
-connect()  # Initialize connection to preswald.toml data sources
+connect()  
 df = get_df('data/netflix_titles.csv')
 
 sql = "SELECT type,count(*) as count FROM data/netflix_titles.csv group by type"
